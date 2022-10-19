@@ -71,8 +71,9 @@ nav .icon > span:hover::before{
 }
 @media (max-width:767px) {
     header{margin-bottom: 0;}
+    nav .logo{width:100px}
     nav img {
-        width: 60%;
+        width: 100%;
         margin: 15px 0;
     }
     nav .icon > span {
