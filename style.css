@@ -94,6 +94,9 @@ nav .icon > span:hover::before{
         bottom: 0px;
         height: 52%;
     }
+    nav .icon > span::before{
+        display: none;
+    }
 }
 /***************end header****************/
 /**************start about*****************/
