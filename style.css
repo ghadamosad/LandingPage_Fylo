@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: hsl(217, 28%, 15%);
+    color:hsl(0, 0%, 100%);
+}
+.container{
+    width:90%;
+    margin: auto;
+}
+/*************** start header *************/
+header{
+    position: relative;
+    height: 1000px;
+    margin-bottom: 50px;
+}
+.curve{
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    z-index: -1;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+nav img{width: 85%;}
+nav .icon > span{
+    margin: 0 25px;
+    position: relative;
+    cursor: pointer;
+}
+nav .icon > span::before{
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    background: hsl(176, 68%, 64%);
+    bottom: -4px;
+    transition: 0.3s;
+}
+nav .icon > span:hover::before{
+    width: 100%;
+}
+.head{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+} 
+.head h1{
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.head button{
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin: 15px 0;
+    background-color: hsl(176, 68%, 64%);
+    color: #fff;
+    cursor: pointer;
+}
+@media (max-width:767px) {
+    header{margin-bottom: 0;}
+    nav img {
+        width: 60%;
+        margin: 15px 0;
+    }
+    nav .icon > span {
+        padding: 0px 4px;
+        margin: 0;
+    }
+    .head img{
+        width: 100%;
+    }
+    .head{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    .head h1{font-size: 23px;}
+    .head p{font-size: 14px;}
+    .curve{
+        bottom: 0px;
+        height: 52%;
+    }
+}
+/***************end header****************/
+/**************start about*****************/
+.about{
+    background-color:  hsl(218, 28%, 13%);
+    margin-top: 150px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    gap:20px;
+    text-align: center;
+}
+.wrapper .info{
+    padding: 40px 90px;   
+}
+.wrapper p 
+{
+    font-weight: 900;
+    font-size: 20px;
+}
+@media (max-width:767px) {
+    .about{
+        margin-top: 0;
+    }
+    .wrapper{
+        grid-template-columns: minmax(300px,1fr);
+    }
+    .wrapper .info{padding: 20px 0;}
+    
+}
+.productive{
+    display: flex;
+    padding: 150px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.productive .pro-info{ padding-left: 68px;}
+.productive img.ill{
+    width:66%
+}
+.productive h2{font-size: 40px;}
+.productive > .pro-info p{
+    color:#f6f6f6de;
+    margin-bottom: 14px;
+}
+.productive a{
+    text-decoration: none;
+    color: hsl(176, 68%, 64%);
+    position: relative;
+    transition: 0.3s;
+}
+.productive a::after{
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: hsl(176, 68%, 64%);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.productive a:hover::after{
+    width:150px;
+}
+.productive a span{
+    position: absolute;
+    right: -22px;
+    bottom: -3px;
+    transition: 0.3s;
+}
+.productive a:hover span{
+    right:-25px ;
+}
+@media (max-width:767px) {
+    .productive{
+        display: block;
+    }
+    .productive img.ill {
+        width: 100%;
+    }
+    .productive .pro-info{
+         padding-left: 0;
+         padding-top: 20px;
+    }
+    .productive h2{font-size: 1.5em;}
+}
+.test{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap:50px;
+    position: relative;
+    z-index: 1;
+}
+.test .quote{
+    position: absolute;
+    top: -35px;
+    z-index: -1;
+}
+.test .info{
+    background: hsl(219, 30%, 18%);
+    border-radius: 20px;
+    padding: 40px;
+}
+.test .info >div{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.test .info >div img{
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 15px;
+}
+.test .info >div h3{font-size: 15px;}
+.test .info >div span{
+    color: #777777a3;
+    display: block;
+    margin-top: -10px;
+}
+@media (max-width:767px){
+    .test{
+        grid-template-columns: minmax(300px,1fr);
+    }
+}
+.email{
+    background-color: hsl(219, 30%, 18%);
+    width: fit-content;
+    margin: 120px auto 0;
+    text-align: center;
+    padding: 50px;
+    border-radius: 6px;
+    position: relative;
+    bottom: -80px;
+}
+.email h3{
+    font-size: 33px;
+}
+.email p{
+    padding: 0 110px;
+    font-size: 14px;
+}
+.email input{
+    width: 60%;
+    height: 50px;
+    padding-left: 15px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 30px;
+    outline: none;
+}
+.email input:focus::placeholder{
+    opacity: 0;
+}
+.email button{
+    background: hsl(176, 68%, 64%);
+    color: #fff;
+    border: none;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.email #text{
+    padding-left: 10px;
+}
+@media (max-width:767px){
+    .email{
+        padding: 40px;
+    }
+    .email p{
+        padding: 0;
+    }
+    .email input {
+        width: 90%;}
+    .email button{
+        margin-top: 20px;
+        width: 95%;
+    }
+    .email #text{
+        display: block;
+        text-align: start;
+        margin-top: 5px;
+        padding-left: 25px;
+    }
+}
+/***************end about*****************/
+/************start footer***************/
+footer{
+    margin:150px 0 50px
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+}
+footer .logo{
+    width: 10%;
+}
+.footer .info >div{
+    display: flex;
+    align-items: start;
+    margin-top: 15px;;
+}
+.footer .info >div img{
+    margin: 9px 15px 0 0;
+}
+.footer span{
+    display: block;
+}
+.footer i{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 12px;
+    cursor: pointer;
+}
+@media(max-width:767px){
+    footer .logo {
+        width: 28%;
+    }
+    .footer .info:last-child{
+        text-align: center;
+    }
+}
+/***********end footer***************/
+
